@@ -9,7 +9,7 @@ const products = {
         reviews: 10,
         category: "Electronics",
         tags: ["Electronics", "Smartphone", "Tablet", "Laptop", "Mobile"],
-        link: "product.html"
+        link: "https://buy.stripe.com/test_3cscO2cSS1ncgcE3cd"
     },
     2: {
         id: 2,
@@ -21,7 +21,7 @@ const products = {
         reviews: 10,
         category: "Electronics",
         tags: ["Electronics", "Smartphone", "Tablet", "Laptop", "Mobile"],
-        link: "product.html"
+        link: "https://buy.stripe.com/test_3cscO2cSS1ncgcE3cd"
     },
     3: {
         id: 3,
@@ -33,7 +33,7 @@ const products = {
         reviews: 10,
         category: "Electronics",
         tags: ["Electronics", "Smartphone", "Tablet", "Laptop", "Mobile"],
-        link: "product.html"
+        link: "https://buy.stripe.com/test_3cscO2cSS1ncgcE3cd"
     },
     4: {
         id: 4,

@@ -46,4 +46,44 @@
     <div id="product-details"></div>
 
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const productDetails = document.getElementById("product-details");
+        const productImage = document.querySelector(".product-image img");
+        const productInfo = document.querySelector(".product-info");
+        const productPrice = document.querySelector(".product-price");
+        const productLinkButton = document.querySelector(".product-link-button");
+
+        // Get the product ID from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get("id");
+
+        // Get the product details from the object
+        const product = products[productId];
+
+        // Set the product image
+        productImage.src = product.image;
+
+        // Set the product info
+        productInfo.innerHTML = `
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <div class="product-price">$${product.price.toFixed(2)}</div>
+            <div class="product-rating">Rating: ${product.rating} ★</div>
+            <div class="product-reviews">${product.reviews} Reviews</div>
+            <div class="product-tags">Tags: ${product.tags.join(", ")}</div>
+            <a href="${product.link}" class="button">
+                <button class="product-link-button">Buy now</button>
+            </a>
+        `;
+
+        // Set the product price
+        productPrice.innerHTML = `$${product.price.toFixed(2)}`;
+
+        // Set the product link button
+        productLinkButton.addEventListener("click", () => {
+            window.location.href = product.link;
+        });
+    });
+</script>
 </html>

@@ -73,32 +73,3 @@ const products = {
     }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-    const productGrid = document.getElementById("products-grid");
-
-    // Iterate over products using Object.values
-    Object.values(products).forEach(product => {
-        const productElement = document.createElement("div");
-        productElement.classList.add("product");
-        productElement.innerHTML = `
-            <div class="product-image">
-                <img src="${product.image}" alt="${product.name}">
-            </div>
-            <div class="product-info">
-                <h3>${product.name}</h3>
-                <p>${product.description}</p>
-                <div class="product-price">$${product.price.toFixed(2)}</div>
-                <div class="product-rating">Rating: ${product.rating} ★</div>
-                <div class="product-reviews">${product.reviews} Reviews</div>
-                <div class="product-tags">Tags: ${product.tags.join(", ")}</div>
-                <a href="product.html?id=${product.id}" class="button">
-                    <button class="product-link-button">View Details</button>
-                </a>
-            </div>
-        `;
-        productGrid.appendChild(productElement);
-    });
-
-    // Optional: Smooth scroll to the product grid
-    window.scrollTo({ top: productGrid.offsetTop, behavior: "smooth" });
-});
